@@ -14,23 +14,41 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-    },
-    colors: {
-      purple: {
-        50: '#919CFF',
-        200: '#6474FF',
-        300: '#4658FF'
+      padding: {
+        lg: '89px'
       },
-      green: {
-        light: '#88FF12'
+      screens: {
+        xxl: '1536px',
+        xs: '450px'
       },
-      orange: {
-        light: '#E46E00'
+      fontSize: {
+        title: '86px',
+        subtitle: '24px'
+      },
+      colors: {
+        blue: {
+          50: '#6486FF'
+        },
+        pink: {
+          light: '#FF46CB'
+        },
+        purple: {
+          50: '#919CFF',
+          200: '#6474FF',
+          300: '#4658FF'
+        },
+        green: {
+          light: '#88FF12'
+        },
+        orange: {
+          light: '#E46E00'
+        }
+      },
+      fontFamily: {
+        Oi: 'Oi',
+        Archivo: 'Archivo'
       }
     },
-    fontFamily: {
-      oi: 'Oi'
-    }
   },
   plugins: [],
 };

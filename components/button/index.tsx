@@ -7,19 +7,32 @@ const Button = ({
 }: {
     type: "button" | "submit" | "reset" | undefined,
     variant: string,
-    className: string,
-    onClick: () => void,
+    className?: string,
+    onClick?: () => void,
     children: React.ReactNode
 }) => {
-    return ( 
-        <button
-            type={type}
-            onClick={onClick}
-            className={`${className} px-4 py-2`}
-        >
-            {children}
-        </button>
-    );
+    switch (variant) {
+        case 'border':
+            return ( 
+                <button
+                    type={type}
+                    onClick={onClick}
+                    className={`${className} text-white font-Archivo border border-white rounded-xl py-4 px-6`}
+                >
+                    {children}
+                </button>
+            );
+        case 'primary':
+            return (
+                <button
+                    type={type}
+                    onClick={onClick}
+                    className={`${className} text-white border font-Archivo border-purple-200 bg-purple-300 rounded-xl py-4 px-6`}
+                >
+                    {children}
+                </button>            
+            );
+    }
 }
 
 export default Button;
