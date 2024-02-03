@@ -16,7 +16,7 @@ const TokenAllocation = () => {
                     <CardWallet />
                 </div>
 
-                <div className="absolute h-[708px] flex justify-end ml-64 -mt-20 sm:h-screen w-full -z-50">
+                <div className="absolute h-[708px] flex justify-end ml-64 -mt-20 sm:h-screen w-full xxl:w-[55%] -z-50">
                     <Image src="/images/grid.svg" alt="Background Hero" fill className="object-bottom object-cover" />
                 </div>
 
