@@ -3,7 +3,7 @@ const Text = ({
     className,
     children
 }: {
-    variant: string,
+    variant?: string,
     className?: string,
     children: React.ReactNode
 }) => {
@@ -31,6 +31,12 @@ const Text = ({
                 <p className={`${className} font-Archivo text-white text-sm lg:text-base`}>
                     {children}
                 </p>
+            )
+        default:
+            return (
+                <h3 className={`${className} font-Archivo`}>
+                    {children}
+                </h3>
             )
     }
 }
