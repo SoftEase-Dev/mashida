@@ -26,8 +26,12 @@ const config: Config = {
         subtitle: '24px'
       },
       colors: {
+        dark: {
+          primary: '#12121B',
+          secondary: '#171829'
+        },
         blue: {
-          50: '#6486FF'
+          50: '#6486FF',
         },
         pink: {
           light: '#FF46CB'
