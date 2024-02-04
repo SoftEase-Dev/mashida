@@ -8,23 +8,23 @@ export default function Home() {
   return (
     <>
       {/* Header Section */}
-      <section className="max-w-screen-2xl m-auto">
+      <section>
         <Header />
       </section>
 
       {/* Token Section */}
-      <section className="max-w-screen-2xl m-auto">
+      <section>
         <TokenAllocation />
       </section>
 
-      {/* Partner Section */}
-      <section className="max-w-screen-2xl m-auto">
-        <Partnership />
+      {/* Team Section */}
+      <section>
+        <Team  />
       </section>
 
-      {/* Team Section */}
-      <section className="max-w-screen-2xl m-auto">
-        <Team  />
+      {/* Partner Section */}
+      <section>
+        <Partnership />
       </section>
     </>
   );

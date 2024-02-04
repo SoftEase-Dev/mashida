@@ -8,7 +8,7 @@ const Partnership = () => {
     return (
         <>
             <Container>
-                <div className="absolute h-[708px] flex justify-end ml-64 -mt-28 sm:h-screen w-full xxl:w-[55%] -z-50">
+                <div className="absolute h-[708px] flex justify-end ml-64 -mt-20 sm:h-screen w-[75%] xxl:w-[55%] -z-50">
                     <Image src="/images/grid.svg" alt="Background Hero" fill className="object-bottom object-cover" />
                 </div>
                 <div className="w-full flex justify-center">
