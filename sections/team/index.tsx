@@ -22,6 +22,8 @@ const Team = () => {
                                 key={index}
                                 name={item.name}
                                 img={item.img}
+                                linkedin={item.linkedin}
+                                x={item.x}
                             />
                         )
                     })

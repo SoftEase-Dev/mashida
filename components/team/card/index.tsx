@@ -6,11 +6,15 @@ import { FaXTwitter } from "react-icons/fa6";
 const CardTeam = ({
     name,
     img,
-    job
+    job,
+    linkedin,
+    x
 }: {
     name: string,
     img: string,
-    job: string
+    job: string,
+    linkedin: string,
+    x: string
 }) => {
     return (
         <div className="flex flex-col">
@@ -21,8 +25,12 @@ const CardTeam = ({
                 <Text className="text-lg sm:text-xl lg:text-2xl text-white font-medium">{name}</Text>
                 <Text className="text-lg sm:text-xl lg:text-2xl text-white/55 font-medium">{job}</Text>
                 <div className="flex text-white flex-row gap-2">
-                    <FaXTwitter className="w-6 h-6" />
-                    <FaLinkedin className="w-6 h-6" />
+                    <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                        <FaXTwitter className="w-6 h-6" />
+                    </a>
+                    <a href={x} target="_blank" rel="noopener noreferrer">
+                        <FaLinkedin className="w-6 h-6" />
+                    </a>
                 </div>
             </div>
         </div>
