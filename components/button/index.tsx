@@ -6,7 +6,7 @@ const Button = ({
     onClick
 }: {
     type: "button" | "submit" | "reset" | undefined,
-    variant: string,
+    variant?: string,
     className?: string,
     onClick?: () => void,
     children: React.ReactNode
@@ -38,6 +38,16 @@ const Button = ({
                     type={type}
                     onClick={onClick}
                     className={`${className} text-dark-secondary font-Archivo bg-white rounded-xl py-2 px-2`}
+                >
+                    {children}
+                </button>
+            );
+        default:
+            return (
+                <button
+                    type={type}
+                    onClick={onClick}
+                    className={`${className} text-white font-Archivo border border-white`}
                 >
                     {children}
                 </button>

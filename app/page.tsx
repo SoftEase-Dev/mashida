@@ -1,5 +1,6 @@
 import Header from "@/sections/header";
 import Partnership from "@/sections/partnership";
+import Roadmap from "@/sections/roadmap";
 import Team from "@/sections/team";
 import TokenAllocation from "@/sections/token-allocation";
 import Image from "next/image";
@@ -17,9 +18,14 @@ export default function Home() {
         <TokenAllocation />
       </section>
 
+      {/* Roadmap Section */}
+      <section>
+        <Roadmap />
+      </section>
+
       {/* Team Section */}
       <section>
-        <Team  />
+        <Team />
       </section>
 
       {/* Partner Section */}

@@ -32,6 +32,9 @@ const config: Config = {
           100: '#272941',
           200: '#141522',
         },
+        grey: {
+          primary: '#1E202E'
+        },
         blue: {
           50: '#6486FF',
         },

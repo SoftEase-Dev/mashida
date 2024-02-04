@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600;700;800&family=Oi&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600;700;800&family=Oi&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  background: #0F101B;
+  background: #0f101b;
 }
 
 ::-webkit-scrollbar {
@@ -17,13 +17,31 @@ body {
   background-color: transparent;
 }
 
-
 ::-webkit-scrollbar-thumb {
-  background-color: #4658FF;
+  background-color: #4658ff;
   border-radius: 5px;
-  transition: all 400ms ease-in-out
+  transition: all 400ms ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #6486FF;
+  background-color: #6486ff;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.border-gradient {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 12px;
+  border-image: radial-gradient(89.84% 87.62% at 93.91% 97.36%, #6474FF 0%, rgba(100, 116, 255, 0) 100%) 20;
 }
