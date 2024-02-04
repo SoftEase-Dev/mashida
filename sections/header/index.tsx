@@ -17,7 +17,7 @@ const Header = () => {
             </div>
 
             <Container className="h-screen flex w-full justify-center items-center">
-                <div className="flex flex-col z-50 items-center w-[80%] relative text-center">
+                <div className="flex flex-col z-30 items-center w-[80%] relative text-center">
                     <Text variant="title" className="">Play and <span className="text-pink-light">Earn</span></Text>
                     <div className="flex w-full h-full justify-end -mt-10 ml-16">
                         <Image src={'/images/line.svg'} alt="" width={400} height={20} />
