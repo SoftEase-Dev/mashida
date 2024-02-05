@@ -45,3 +45,23 @@ body {
   border-radius: 12px;
   border-image: radial-gradient(89.84% 87.62% at 93.91% 97.36%, #6474FF 0%, rgba(100, 116, 255, 0) 100%) 20;
 }
+
+.card-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
+  position: relative;
+  max-width: calc(100% - 20px);
+  margin: 0 auto 90vh;
+}
+
+.card {
+  color: white;
+  border-radius: 12px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 1px;
+}
