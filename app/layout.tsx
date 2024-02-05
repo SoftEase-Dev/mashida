@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className='max-w-screen-2xl m-auto overflow-x-hidden'>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
