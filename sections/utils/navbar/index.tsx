@@ -25,7 +25,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <Container variant="navbar" className={`${isScrolled ? 'bg-dark-primary/80' : ''} top-0 w-full z-50 transition-all duration-500 fixed  max-w-screen-2xl mx-auto`}>
+        <Container variant="navbar" className={`${isScrolled ? 'bg-dark-primary/80' : ''} top-0 w-full z-50 transition-all duration-500 fixed max-w-screen-2xl mx-auto`}>
             <div className="flex flex-row w-full justify-between">
                 <div className="flex flex-row w-full items-center gap-3">
                     <div className="w-[225px] relative h-[32px]">
@@ -35,7 +35,9 @@ const Navbar = () => {
                         <Text className="text-xs text-white font-Archivo">$MSHD</Text>
                     </div>
                 </div>
-                <div className="flex flex-row gap-10 w-full items-center justify-end font-Archivo text-white">
+
+                {/* Desktop */}
+                <div className="flex-row gap-10 w-full lg:flex hidden items-center justify-end font-Archivo text-white">
                     <div className="flex flex-row gap-2 cursor-pointer items-center">
                         <Text className="text-base">Trade</Text>
                         <IoIosArrowDown className="w-4 h-4" />

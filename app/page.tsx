@@ -1,6 +1,7 @@
 import Header from "@/sections/header";
 import Partnership from "@/sections/partnership";
 import Roadmap from "@/sections/roadmap";
+import Features from "@/sections/scroll-video";
 import Team from "@/sections/team";
 import TokenAllocation from "@/sections/token-allocation";
 import Image from "next/image";
@@ -11,6 +12,11 @@ export default function Home() {
       {/* Header Section */}
       <section>
         <Header />
+      </section>
+
+      {/* Features Section */}
+      <section>
+        <Features />
       </section>
 
       {/* Token Section */}

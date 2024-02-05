@@ -10,7 +10,7 @@ const Text = ({
     switch (variant) {
         case 'title':
             return (
-                <h1 className={`${className} font-Oi text-4xl sm:text-6xl lg:text-title text-white`}>
+                <h1 className={`${className} font-Oi text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-title text-white`}>
                     {children}
                 </h1>
             )
@@ -22,7 +22,7 @@ const Text = ({
             )
         case 'subtitle-paragraph':
             return (
-                <p className={`${className} font-Archivo text-lg text-white sm:text-xl lg:text-2xl`}>
+                <p className={`${className} font-Archivo text-base text-white md:text-lg lg:text-2xl`}>
                     {children}
                 </p>
             )

@@ -5,8 +5,6 @@ import 'swiper/css';
 import Footer from "@/sections/utils/footer";
 import Navbar from "@/sections/utils/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "Mashida",
   description: "",
@@ -23,7 +21,7 @@ export default function RootLayout({
       <body className='max-w-screen-2xl m-auto overflow-x-hidden'>
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

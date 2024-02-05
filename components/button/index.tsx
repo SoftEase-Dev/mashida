@@ -17,7 +17,7 @@ const Button = ({
                 <button
                     type={type}
                     onClick={onClick}
-                    className={`${className} text-white font-Archivo border border-white rounded-xl py-4 px-6`}
+                    className={`${className} text-white text-sm lg:text-base font-Archivo border border-white rounded-xl py-4 px-6`}
                 >
                     {children}
                 </button>
@@ -27,7 +27,7 @@ const Button = ({
                 <button
                     type={type}
                     onClick={onClick}
-                    className={`${className} text-white border font-Archivo border-purple-200 bg-purple-300 rounded-xl py-4 px-6`}
+                    className={`${className} text-white border text-sm lg:text-base font-Archivo border-purple-200 bg-purple-300 rounded-xl py-4 px-6`}
                 >
                     {children}
                 </button>
@@ -37,7 +37,7 @@ const Button = ({
                 <button
                     type={type}
                     onClick={onClick}
-                    className={`${className} text-dark-secondary font-Archivo bg-white rounded-xl py-2 px-2`}
+                    className={`${className} text-dark-secondary text-sm lg:text-base font-Archivo bg-white rounded-xl py-2 px-2`}
                 >
                     {children}
                 </button>
@@ -47,7 +47,7 @@ const Button = ({
                 <button
                     type={type}
                     onClick={onClick}
-                    className={`${className} text-white font-Archivo border border-white`}
+                    className={`${className} text-white text-sm lg:text-base font-Archivo border border-white`}
                 >
                     {children}
                 </button>

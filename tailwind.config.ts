@@ -19,7 +19,8 @@ const config: Config = {
       },
       screens: {
         xxl: '1536px',
-        xs: '450px'
+        xs: '450px',
+        s: '400px'
       },
       fontSize: {
         title: '86px',
