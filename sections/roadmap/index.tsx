@@ -22,7 +22,7 @@ const Roadmap = () => {
             <div className="w-full pl-16 -mt-10">
                 <div className="rounded-l-full h-2 bg-grey-primary flex flex-row items-center">
                     <div className="h-full rounded-l-full bg-purple-300 w-[85%]" />
-                    <Button type="button" className="text-white rounded-full px-2 py-1 border-4 border-dark-200 bg-purple-300 text-sm">Lorem ipsum</Button>
+                    <Button type="button" className="text-white rounded-full px-2 py-1 border-4 border-[#0F101B] bg-purple-300 text-sm">Lorem ipsum</Button>
                 </div>
             </div>
             <Container>
