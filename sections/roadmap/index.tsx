@@ -12,22 +12,22 @@ const Roadmap = () => {
     return (
         <>
             <Container>
-                <div className="absolute h-[708px] flex justify-end ml-64 -mt-20 sm:h-screen w-[70%] xxl:w-[55%] -z-50">
+                <div className="absolute h-[708px] flex justify-end ml-20 lg:ml-64 -mt-20 sm:h-screen w-[70%] xxl:w-[55%] -z-50">
                     <Image src="/images/grid.svg" alt="Background Hero" fill className="object-bottom object-cover" />
                 </div>
                 <div className="w-full flex justify-center">
                     <Text variant="subtitle">Roadmap</Text>
                 </div>
             </Container>
-            <div className="w-full pl-16 -mt-10">
+            <div className="w-full pl-8 lg:pl-16 lg:-mt-10">
                 <div className="rounded-l-full h-2 bg-grey-primary flex flex-row items-center">
-                    <div className="h-full rounded-l-full bg-purple-300 w-[85%]" />
-                    <Button type="button" className="text-white rounded-full px-2 py-1 border-4 border-[#0F101B] bg-purple-300 text-sm">Lorem ipsum</Button>
+                    <div className="h-full rounded-l-full bg-purple-300 w-[65%] sm:w-[70%] lg:w-[85%]" />
+                    <div className="text-white rounded-full px-1 lg:px-2 py-1 bg-purple-300 border-4 border-dark-primary text-xs lg:text-sm">Lorem ipsum</div>
                 </div>
             </div>
             <Container>
                 <Swiper
-                    className="mySwiper"
+                    className="mySwiper lg:mt-0 mt-5"
                     breakpoints={{
                         1275: {
                             slidesPerView: 3.5,
@@ -59,7 +59,7 @@ const Roadmap = () => {
                         roadmap.map((item) => {
                             return (
                                 <SwiperSlide key={item.id}>
-                                    <CardRoadmap 
+                                    <CardRoadmap
                                         name={item.name}
                                         list={item.list}
                                     />

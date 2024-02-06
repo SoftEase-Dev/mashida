@@ -4,6 +4,7 @@ import Roadmap from "@/sections/roadmap";
 import Features from "@/sections/scroll-video";
 import Team from "@/sections/team";
 import TokenAllocation from "@/sections/token-allocation";
+import Modal from "@/sections/utils/modal";
 import Image from "next/image";
 
 export default function Home() {
@@ -20,22 +21,22 @@ export default function Home() {
       </section>
 
       {/* Token Section */}
-      <section>
+      <section className="max-w-screen-2xl m-auto">
         <TokenAllocation />
       </section>
 
       {/* Roadmap Section */}
-      <section>
+      <section className="max-w-screen-2xl m-auto">
         <Roadmap />
       </section>
 
       {/* Team Section */}
-      <section>
+      <section className="max-w-screen-2xl m-auto">
         <Team />
       </section>
 
       {/* Partner Section */}
-      <section>
+      <section className="max-w-screen-2xl m-auto">
         <Partnership />
       </section>
     </>

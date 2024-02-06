@@ -38,7 +38,7 @@ const Header = () => {
                 </div>
             </Container>
             <div className="relative h-[708px] bottom-0 sm:h-screen -mt-[650px] md:-mt-[800px] lg:-mt-[550px] xl:-mt-[650px] w-full -z-50">
-                <Image src="/images/mashida-hero.svg" alt="Background Hero" fill className="object-bottom object-contain" />
+                <Image src="/images/mashida-hero.svg" alt="Background Hero" fill className="object-bottom object-contain xxl:object-cover" />
             </div>
         </header>
     );

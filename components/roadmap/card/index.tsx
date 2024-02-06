@@ -14,7 +14,7 @@ const CardRoadmap = ({
     return (
         <>
             <div className={`${name === 'Q1 2023' ? 'border-gradient' : ''} bg-dark-200 h-[410px] flex flex-col w-full p-6 rounded-xl text-white gap-2`}>
-                <div className="bg-purple-300 rounded-lg w-[40%]">
+                <div className="bg-purple-300 rounded-lg w-[60%] sm:w-[50%] md:w-[40%]">
                     <Text className="text-base p-2">{name}</Text>
                 </div>
                 <div className="gap-y-2 flex flex-col mt-4">
@@ -22,7 +22,7 @@ const CardRoadmap = ({
                         list.map((item, index) => {
                             return (
                                 <div key={index} className="flex flex-row items-center justify-between">
-                                    <Text className="text-base line-clamp-1 font-medium">{item.name}</Text>
+                                    <Text className="text-sm lg:text-base line-clamp-1 font-medium">{item.name}</Text>
                                     {
                                         item.check === true ?
                                         <div className="bg-green-light p-1 text-black rounded-full">
