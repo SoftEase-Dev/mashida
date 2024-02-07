@@ -5,7 +5,7 @@ import CardFeatures from "@/components/features/card";
 
 const Features = () => {
     return (
-        <div className={'scrolly-container w-full h-[450vh]'}>
+        <div className={'scrolly-container w-full h-[450vh] object-cover object-center'}>
             <ScrollyVideo src="/videos/timelapse.mp4" />
             {
                 features.map((item, index) => {
