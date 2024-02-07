@@ -10,7 +10,7 @@ const Container = ({
     switch (variant) {
         case 'navbar':
             return (
-                <nav className={`${className} py-3 md:py-6 px-5 lg:px-lg`}>
+                <nav className={`${className} py-6 px-5 lg:px-lg`}>
                     {children}
                 </nav>
             );

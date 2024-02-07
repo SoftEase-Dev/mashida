@@ -8,10 +8,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaWallet } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
+import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
+import anime from 'animejs'
 
 const Navbar = () => {
     const [menuTrade, setMenuTrade] = useState<boolean>(false)
     const [isScrolled, setIsScrolled] = useState<boolean>(false)
+    const [show, setShow] = useState<boolean>(false)
     useEffect(() => {
         const handleScroll = () => {
             const isTop = window.scrollY < 100;
@@ -25,34 +28,48 @@ const Navbar = () => {
         };
     }, []);
 
-    return (
-        <Container variant="navbar" className={`${isScrolled ? 'bg-dark-primary/80' : ''} top-0 w-full z-50 transition-all duration-500 fixed`}>
-            <div className="flex flex-row w-full justify-between">
-                <div className="flex flex-row w-full items-center gap-3">
-                    <div className="w-[225px] relative h-[32px]">
-                        <Image src={'/images/logo-mashida.svg'} alt="Mashida Logo - (Mashida)" fill className="object-contain object-left" />
-                    </div>
-                    <div className="rounded-full bg-purple-300 py-1 px-2">
-                        <Text className="text-xs text-white font-Archivo">$MSHD</Text>
-                    </div>
-                </div>
+    const handleClick = () => {
+        anime({
+            targets: '.background',
+            translateY: [
+                { value: -1000, duration: 0, easing: 'linear' },
+                { value: 0, duration: 500, easing: 'linear' }
+            ],
+        })
+        setShow(true)
+    }
 
-                {/* Desktop */}
-                <div className="flex-row gap-10 w-full lg:flex hidden items-center justify-end font-Archivo text-white">
+    return (
+        <>
+            <Container variant="navbar" className={`${isScrolled ? 'bg-dark-primary/80' : ''} top-0 w-full z-50 transition-all duration-500 fixed`}>
+                <div className="flex flex-row w-full justify-between">
                     <div
-                        onMouseEnter={() => {
-                            setMenuTrade(true)
-                        }}
-                        className="flex flex-col">
-                        <div className="flex flex-row gap-2 cursor-pointer items-center">
-                            <Text className="text-base">Trade</Text>
-                            <IoIosArrowDown className="w-4 h-4" />
+                        onMouseEnter={() => setMenuTrade(false)}
+                        className="flex flex-row w-full items-center gap-3">
+                        <div className="w-[125px] xs:w-[150px] lg:w-[225px] relative h-[32px]">
+                            <Image src={'/images/logo-mashida.svg'} alt="Mashida Logo - (Mashida)" fill className="object-contain object-left" />
                         </div>
-                        {
-                            menuTrade ?
-                                <ul
-                                    onMouseLeave={() => setMenuTrade(false)} 
-                                    className={`mt-8 text-base font-Archivo bg-dark-primary gap-3 flex flex-col p-3 border-2 border-white absolute w-[8%] rounded-lg`}>
+                        <div className="rounded-full bg-purple-300 py-1 px-2">
+                            <Text className="text-xs text-white font-Archivo">$MSHD</Text>
+                        </div>
+                    </div>
+
+                    {/* Desktop */}
+                    <div className={`flex-row gap-10 w-full lg:flex hidden items-center justify-end font-Archivo text-white`}>
+                        <div className="flex flex-col">
+                            <div
+                                onMouseEnter={() => {
+                                    setMenuTrade(true)
+                                }}
+                                className="flex flex-row gap-2 cursor-pointer items-center">
+                                <Text className="text-base">Trade</Text>
+                                <IoIosArrowDown className={`${menuTrade ? 'rotate-180' : 'rotate-0'} transition-all duration-300 w-4 h-4`} />
+                            </div>
+                            {
+                                menuTrade ?
+                                    <ul
+                                        onMouseLeave={() => setMenuTrade(false)}
+                                        className={`mt-8 text-base cursor-pointer font-Archivo bg-dark-primary gap-3 flex flex-col p-3 border-2 border-white absolute w-[8%] rounded-lg`}>
                                         <li>
                                             Trade
                                         </li>
@@ -62,26 +79,97 @@ const Navbar = () => {
                                         <li>
                                             Buy
                                         </li>
-                                </ul>
-                                :
-                                null
-                        }
-                    </div>
-                    <Link href="">
-                        <Text className="text-base">Play</Text>
-                    </Link>
-                    <div className="flex flex-row gap-2">
-                        <Link href="">
-                            <Text className="text-base">Social</Text>
+                                    </ul>
+                                    :
+                                    null
+                            }
+                        </div>
+                        <Link
+                            onMouseEnter={() => {
+                                setMenuTrade(false)
+                            }}
+                            href="">
+                            <Text className="text-base">Play</Text>
                         </Link>
-                        <Text className="bg-orange-light rounded-full text-white text-xs p-1" >Coming soon</Text>
+                        <div
+                            onMouseEnter={() => {
+                                setMenuTrade(false)
+                            }}
+                            className="flex flex-row gap-2">
+                            <Link href="">
+                                <Text className="text-base">Social</Text>
+                            </Link>
+                            <Text className="bg-orange-light rounded-full text-white text-xs p-1" >Coming soon</Text>
+                        </div>
+                        <Button
+                            onClick={() => {
+                                setMenuTrade(false)
+                            }}
+                            type="button" variant="primary" className="flex flex-row gap-2 items-center">
+                            Connect Wallet <FaWallet className="w-5 h-5" />
+                        </Button>
                     </div>
-                    <Button type="button" variant="primary" className="flex flex-row gap-2 items-center">
-                        Connect Wallet <FaWallet className="w-5 h-5" />
-                    </Button>
+
+                    {/* Mobile */}
+                    <div className={`${show ? 'hidden' : 'flex'} lg:hidden flex`}>
+                        <RxHamburgerMenu onClick={() => handleClick()} className="w-6 h-6 text-white" />
+                    </div>
+
                 </div>
+            </Container>
+
+            <div className={`${show ? 'flex' : 'hidden'} h-screen absolute background z-50 lg:hidden flex w-full`}>
+                {
+                    show ?
+                        <div className="bg-purple-300/80 h-full p-6 w-full text-white z-50">
+                            <div className="flex flex-col gap-10">
+                                <div className="flex w-full justify-end">
+                                    <RxCross2 onClick={() => setShow(false)} className="w-6 h-6" />
+                                </div>
+                                <div className="flex flex-col gap-6 font-medium text-xl">
+                                    <div className="flex flex-col">
+                                        <div onClick={() => setMenuTrade(!menuTrade)} className="flex flex-row gap-2 items-center">
+                                            <Text>Trade</Text>
+                                            <IoIosArrowDown className={`${menuTrade ? 'rotate-180' : 'rotate-0'} transition-all duration-300 w-4 h-4`} />
+                                        </div>
+                                        <ul className={`${menuTrade ? 'translate-y-0 flex' : 'translate-y-10 hidden'} mt-2 duration-300 font-normal text-lg transition-all pl-5 flex-col gap-2`}>
+                                            <li>
+                                                Trade
+                                            </li>
+                                            <li>
+                                                Convert
+                                            </li>
+                                            <li>
+                                                Buy
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <Link
+                                        href="">
+                                        <Text className="text-xl">Play</Text>
+                                    </Link>
+
+                                    <div
+                                        className="flex flex-row gap-2">
+                                        <Link href="">
+                                            <Text className="text-xl">Social</Text>
+                                        </Link>
+                                        <Text className="bg-orange-light rounded-full text-white text-xs p-1" >Coming soon</Text>
+                                    </div>
+
+                                    <Button
+                                        type="button" variant="primary" className="flex justify-center bg-white text-purple-300 flex-row gap-2 items-center">
+                                        Connect Wallet <FaWallet className="w-5 h-5" />
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                        :
+                        null
+                }
             </div>
-        </Container >
+        </>
     );
 }
 
