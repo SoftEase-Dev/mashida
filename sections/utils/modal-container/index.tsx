@@ -6,6 +6,7 @@ import Link from "next/link";
 import CardConnect from "@/components/card/connect-wallet";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import CardConvert from "@/components/card/convert";
 
 export type Modal = {
     title?: string;
@@ -90,8 +91,8 @@ const ModalContainer = ({
                                 <Text className="text-2xl font-semibold">{modal.title}</Text>
                                 <RxCross2 onClick={() => setOpen(false)} className="w-6 cursor-pointer h-6" />
                             </div>
-                            <div>
-                                
+                            <div className="mt-4">
+                                <CardConvert />
                             </div>
                         </>
                         :

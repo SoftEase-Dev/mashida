@@ -145,7 +145,13 @@ const Navbar = () => {
                                             <li>
                                                 Trade
                                             </li>
-                                            <li>
+                                            <li onClick={() => {
+                                                setModal({
+                                                    title: 'Connect a Wallet',
+                                                    type: 'normal',
+                                                    variant: 'wallet'
+                                                })
+                                            }}>
                                                 Convert
                                             </li>
                                             <li>
