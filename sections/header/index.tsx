@@ -16,7 +16,7 @@ const Header = () => {
                 <div className="w-[250px] h-[250px] blur-[150px] mr-56 mt-20 rounded-full bg-blue-50" />
             </div>
 
-            <Container className="h-screen flex w-full justify-center items-center">
+            <Container className="h-screen flex w-full justify-center items-center max-w-screen-2xl m-auto">
                 <div className="flex flex-col z-30 items-center w-full xl:w-[90%] relative text-center">
                     <Text variant="title" className="">Play and <span className="text-pink-light">Earn</span></Text>
                     <div className="flex s:hidden xs:flex xs:my-2 lg:my-3 md:ml-10 lg:ml-20 xl:ml-32 xxl:ml-0 w-[95%] md:w-[85%] justify-center xs:justify-end">

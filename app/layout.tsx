@@ -4,6 +4,7 @@ import "./globals.css";
 import 'swiper/css';
 import Footer from "@/sections/utils/footer";
 import Navbar from "@/sections/utils/navbar";
+import { ModalProvider } from "@/hooks/modal";
 
 export const metadata: Metadata = {
   title: "Mashida",
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='overflow-x-hidden'>
-        <Navbar />
-        {children}
-        <Footer />
+        <ModalProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );
