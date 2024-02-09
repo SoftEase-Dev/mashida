@@ -70,12 +70,12 @@ const Footer = () => {
                                     <Text className="font-semibold text-sm lg:text-base">Features</Text>
                                     <ul className="font-Archivo gap-2 flex flex-col text-sm lg:text-base">
                                         <li className="hover:text-black hover:ml-2 duration-500 hover:animate-pulse transition-all">
-                                            <Link href="https://mashida.gitbook.io/mashida-whitepaper/">
+                                            <Link target="_blank" href="https://mashida.gitbook.io/mashida-whitepaper/">
                                                 Whitepaper
                                             </Link>
                                         </li>
                                         <li className="hover:text-black hover:ml-2 duration-500 hover:animate-pulse transition-all">
-                                            <Link href="">
+                                            <Link target="_blank" href="https://cdn.me-qr.com/pdf/12619208.pdf">
                                                 Company
                                             </Link>
                                         </li>

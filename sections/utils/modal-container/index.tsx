@@ -12,7 +12,7 @@ export type Modal = {
     title?: string;
     subTitle?: string;
     type: 'switch' | 'normal' | '';
-    variant: 'wallet' | '';
+    variant?: 'wallet' | '';
 };
 
 const ModalContainer = ({
@@ -31,13 +31,14 @@ const ModalContainer = ({
     return (
         <Modal
             open={open}
+            type={modal.type}
         >
             {
                 modal.type === 'normal' ?
                     <>
                         <div className="flex flex-row items-center w-full justify-between">
-                            <Text className="text-2xl font-semibold">{modal.title}</Text>
-                            <RxCross2 onClick={() => setOpen(false)} className="w-6 cursor-pointer h-6" />
+                            <Text className="text-lg sm:text-2xl font-semibold">{modal.title}</Text>
+                            <RxCross2 onClick={() => setOpen(false)} className="w-4 sm:w-6 cursor-pointer h-4 sm:h-6" />
                         </div>
                         <div className="flex flex-col gap-4">
                             {
@@ -87,11 +88,11 @@ const ModalContainer = ({
                     :
                     modal.type === 'switch' ?
                         <>
-                            <div className="flex flex-row items-center w-full justify-between">
-                                <Text className="text-2xl font-semibold">{modal.title}</Text>
-                                <RxCross2 onClick={() => setOpen(false)} className="w-6 cursor-pointer h-6" />
+                            <div className="flex flex-row px-5 pt-5 items-center w-full justify-between">
+                                <Text className="text-lg sm:text-2xl font-semibold">{modal.title}</Text>
+                                <RxCross2 onClick={() => setOpen(false)} className="w-4 sm:w-6 cursor-pointer h-4 sm:h-6" />
                             </div>
-                            <div className="mt-4">
+                            <div className="mt-2">
                                 <CardConvert />
                             </div>
                         </>
