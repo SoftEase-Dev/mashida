@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 import Text from "@/components/text";
-import CardWallet from "@/components/token-allocation/card";
+import CardWallet from "@/components/card/token-allocation";
 import Image from "next/image";
 
 const TokenAllocation = () => {

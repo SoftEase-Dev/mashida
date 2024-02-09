@@ -7,6 +7,7 @@ export type Modal = {
     title?: string;
     subTitle?: string;
     type: 'switch' | 'normal' | '';
+    variant: 'wallet' | '';
 };
 
 type ModalContextType = {
@@ -15,12 +16,12 @@ type ModalContextType = {
 };
 
 export const ModalContext = createContext<ModalContextType>({
-    modal: { title: '', subTitle: '', type: ''},
+    modal: { title: '', subTitle: '', type: '', variant: ''},
     setModal: () => { },
 });
 
 export const ModalProvider = ({ children }: any) => {
-    const [modal, setModal] = useState<Modal>({ title: '', subTitle: '', type: '',});
+    const [modal, setModal] = useState<Modal>({ title: '', variant: '', subTitle: '', type: '',});
 
     return (
         <ModalContext.Provider value={{ modal, setModal }}>

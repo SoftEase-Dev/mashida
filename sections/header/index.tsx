@@ -2,6 +2,7 @@ import Button from "@/components/button";
 import Container from "@/components/container";
 import Text from "@/components/text";
 import Image from "next/image";
+import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Header = () => {
@@ -31,9 +32,11 @@ const Header = () => {
                         <Button type="button" variant="border" className="flex flex-row items-center gap-2">
                             Learn more about Mashida <FaExternalLinkAlt />
                         </Button>
-                        <Button type="button" variant="primary">
-                            Whitepaper
-                        </Button>
+                        <Link href={'https://mashida.gitbook.io/mashida-whitepaper/'} target="_blank">
+                            <Button type="button" variant="primary">
+                                Whitepaper
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </Container>

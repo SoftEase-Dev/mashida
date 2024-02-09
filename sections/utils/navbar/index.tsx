@@ -73,7 +73,9 @@ const Navbar = () => {
                                         onMouseLeave={() => setMenuTrade(false)}
                                         className={`mt-8 text-base xxl:text-3xl xxl:mt-14 cursor-pointer font-Archivo bg-dark-primary gap-3 flex flex-col p-3 border-2 border-white absolute w-[8%] rounded-lg`}>
                                         <li>
-                                            Trade
+                                            <Link target="_blank" href={'https://pancakeswap.finance/swap?outputCurrency=0x06CE168FF4Ca760768f42C440d4266BA705E2F21'}>
+                                                Trade
+                                            </Link>
                                         </li>
                                         <li>
                                             Convert
@@ -109,6 +111,7 @@ const Navbar = () => {
                                 setModal({
                                     title: 'Connect a Wallet',
                                     type: 'normal',
+                                    variant: 'wallet'
                                 })
                             }}
                             type="button" variant="primary" className="flex text-base xxl:text-2xl flex-row gap-2 items-center">
@@ -165,7 +168,15 @@ const Navbar = () => {
                                     </div>
 
                                     <Button
-                                        type="button" className="flex justify-center bg-white text-purple-300 px-2 py-4 rounded-xl flex-row gap-2 items-center">
+                                        type="button"
+                                        onClick={() => {
+                                            setModal({
+                                                title: 'Connect a Wallet',
+                                                type: 'normal',
+                                                variant: 'wallet'
+                                            })
+                                        }}
+                                        className="flex justify-center bg-white text-purple-300 px-2 py-4 rounded-xl flex-row gap-2 items-center">
                                         Connect Wallet <FaWallet className="w-5 h-5" />
                                     </Button>
                                 </div>

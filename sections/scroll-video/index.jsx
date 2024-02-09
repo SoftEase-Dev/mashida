@@ -1,7 +1,7 @@
 "use client"
 
 import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.cjs.jsx';
-import CardFeatures from "@/components/features/card";
+import CardFeatures from "@/components/card/features";
 
 const Features = () => {
     return (

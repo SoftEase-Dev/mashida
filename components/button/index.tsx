@@ -47,7 +47,7 @@ const Button = ({
                 <button
                     type={type}
                     onClick={onClick}
-                    className={`${className} text-white text-sm lg:text-base font-Archivo border border-white`}
+                    className={`${className} text-sm lg:text-base font-Archivo border border-white`}
                 >
                     {children}
                 </button>

@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import CardPartner from "@/components/partnership/card";
+import CardPartner from "@/components/card/partnership";
 import Text from "@/components/text";
 import { partner } from "@/models/dummy/dummyPartner";
 import Image from "next/image";

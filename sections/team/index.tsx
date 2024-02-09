@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import CardTeam from "@/components/team/card";
+import CardTeam from "@/components/card/team";
 import Text from "@/components/text";
 import { team } from "@/models/dummy/dummyTeam";
 import Image from "next/image";

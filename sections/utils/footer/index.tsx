@@ -19,13 +19,13 @@ const Footer = () => {
                                     CHR Office, Grand Slipi Tower, Lantai 9 Unit O Jl. Jend. S. Parman Kav. 22-24 Palmerah, West Jakarta, Province DKI Jakarta Postal Code 11480 Indonesia
                                 </Text>
                                 <div className="flex flex-row gap-x-6 text-white">
-                                    <Link href='' className="hover:text-black hover:animate-pulse transition-all duration-300">
+                                    <Link href='https://twitter.com/mashidatoken' className="hover:text-black hover:animate-pulse transition-all duration-300">
                                         <FaTwitter className="h-6 w-6" />
                                     </Link>
                                     <Link href='' className="hover:text-black hover:animate-pulse transition-all duration-300">
                                         <FaLinkedin className="h-6 w-6" />
                                     </Link>
-                                    <Link href='' className="hover:text-black hover:animate-pulse transition-all duration-300">
+                                    <Link href='https://www.facebook.com/mashidatoken' className="hover:text-black hover:animate-pulse transition-all duration-300">
                                         <FaFacebook className="h-6 w-6" />
                                     </Link>
                                     <Link href='' className="hover:text-black hover:animate-pulse transition-all duration-300">
@@ -70,7 +70,7 @@ const Footer = () => {
                                     <Text className="font-semibold text-sm lg:text-base">Features</Text>
                                     <ul className="font-Archivo gap-2 flex flex-col text-sm lg:text-base">
                                         <li className="hover:text-black hover:ml-2 duration-500 hover:animate-pulse transition-all">
-                                            <Link href="">
+                                            <Link href="https://mashida.gitbook.io/mashida-whitepaper/">
                                                 Whitepaper
                                             </Link>
                                         </li>

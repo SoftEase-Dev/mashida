@@ -2,7 +2,7 @@
 
 import Button from "@/components/button";
 import Container from "@/components/container";
-import CardRoadmap from "@/components/roadmap/card";
+import CardRoadmap from "@/components/card/roadmap";
 import Text from "@/components/text";
 import { roadmap } from "@/models/dummy/dummyRoadmap";
 import Image from "next/image";
