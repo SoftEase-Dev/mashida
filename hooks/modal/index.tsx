@@ -7,7 +7,7 @@ export type Modal = {
     title?: string;
     subTitle?: string;
     type: 'switch' | 'normal' | '';
-    variant?: 'wallet' | '';
+    variant?: 'wallet' | 'buy' | '';
 };
 
 type ModalContextType = {

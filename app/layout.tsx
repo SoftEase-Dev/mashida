@@ -8,8 +8,29 @@ import { ModalProvider } from "@/hooks/modal";
 
 export const metadata: Metadata = {
   title: "Mashida",
-  description: "",
+  description: "The Mashida is comprised of GameFi, SocialFi and NFTFi elements and built on blockchain technology. Mashida is a BEP20 Token and a Web3 Platform that contains a Virtual world and Social and Game application features that are interconnected, and people can interact virtually, work, play, and meet based on activity and interaction.",
   keywords: 'Mashida',
+  authors: [{ name: 'Mashida Team', url: 'http://178.16.141.66:3004/' }],
+  openGraph: {
+    title: 'Mashida',
+    description:
+      'The Mashida is comprised of GameFi, SocialFi and NFTFi elements and built on blockchain technology. Mashida is a BEP20 Token and a Web3 Platform that contains a Virtual world and Social and Game application features that are interconnected, and people can interact virtually, work, play, and meet based on activity and interaction.',
+    url: 'http://178.16.141.66:3004/',
+    siteName: 'Mashida',
+    images: [
+      {
+        url: 'http://178.16.141.66:3004/' + '/images/logo-mashida.svg',
+        width: 512,
+        height: 512,
+      },
+    ],
+    locale: 'en_ID',
+    type: 'website',
+    countryName: 'Indonesia',
+  },
+  colorScheme: 'light',
+  themeColor: '#1E202E',
+  robots: 'index,follow',
 };
 
 export default function RootLayout({

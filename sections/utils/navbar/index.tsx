@@ -85,7 +85,15 @@ const Navbar = () => {
                                         }}>
                                             Convert
                                         </li>
-                                        <li>
+                                        <li
+                                            onClick={() => {
+                                                setModal({
+                                                    title: 'Buy',
+                                                    type: 'normal',
+                                                    variant: 'buy'
+                                                })
+                                            }}
+                                        >
                                             Buy
                                         </li>
                                     </ul>
@@ -158,7 +166,13 @@ const Navbar = () => {
                                             }}>
                                                 Convert
                                             </li>
-                                            <li>
+                                            <li onClick={() => {
+                                                setModal({
+                                                    title: 'Buy',
+                                                    type: 'normal',
+                                                    variant: 'buy'
+                                                })
+                                            }}>
                                                 Buy
                                             </li>
                                         </ul>

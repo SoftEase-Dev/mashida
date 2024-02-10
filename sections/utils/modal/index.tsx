@@ -8,9 +8,11 @@ const Modal = ({
     open,
     className,
     children,
-    type
+    type,
+    variant
 }: {
     open: boolean,
+    variant?: string,
     children: React.ReactNode
     className?: string,
     type?: string
@@ -28,6 +30,18 @@ const Modal = ({
                     { value: 1, duration: 500, easing: 'linear' }
                 ]
             })
+        } else {
+            anime({
+                targets: '.modal',
+                translateY: [
+                    { value: 0, duration: 0, easing: 'linear' },
+                    { value: -300, duration: 500, easing: 'linear' }
+                ],
+                opacity: [
+                    { value: 1, duration: 0, easing: 'linear' },
+                    { value: 0, duration: 500, easing: 'linear' }
+                ]
+            })
         }
     }, [open])
     return (
@@ -37,7 +51,7 @@ const Modal = ({
                     <div className='fixed inset-0 overflow-y-auto z-[1000]'>
                         <div className="flex items-center justify-center h-full w-full">
                             <div className='fixed inset-0 bg-black bg-opacity-50' />
-                            <div className={`${type === 'normal' ? 'h-[550px]' : 'h-[620px]'} overflow-auto max-h-[620px] bg-dark-primary modal w-[300px] sm:w-[400px] rounded-2xl z-50`}>
+                            <div className={`${type === 'normal' ? 'h-[550px]' : 'h-[620px]'} ${variant === 'buy' ? 'w-[300px] sm:w-[800px]' : 'w-[300px] sm:w-[400px]'} overflow-auto max-h-[620px] bg-dark-primary modal rounded-2xl z-50`}>
                                 <div className={`${type === 'normal' ? 'p-5' : 'p-0'} text-white flex gap-4 flex-col`}>
                                     {children}
                                 </div>
