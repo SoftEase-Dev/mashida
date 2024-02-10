@@ -111,7 +111,7 @@ export const roadmap = [
         list: [
             {
                 name: 'SocialFi AlphaTest',
-                check: true
+                check: false
             },
         ]
     },
