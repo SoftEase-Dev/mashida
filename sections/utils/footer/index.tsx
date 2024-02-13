@@ -3,7 +3,7 @@ import Text from "@/components/text";
 import Image from "next/image";
 import Link from "next/link";
 import { FaDribbble, FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaRegHandPeace } from "react-icons/fa6";
+import { FaAngellist, FaRegHandPeace } from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -32,7 +32,7 @@ const Footer = () => {
                                         <FaGithub className="h-6 w-6" />
                                     </Link>
                                     <Link href='' className="hover:text-black hover:animate-pulse transition-all duration-300">
-                                        <FaRegHandPeace className="h-6 w-6" />
+                                        <FaAngellist className="h-6 w-6" />
                                     </Link>
                                     <Link href='' className="hover:text-black hover:animate-pulse transition-all duration-300">
                                         <FaDribbble className="h-6 w-6" />

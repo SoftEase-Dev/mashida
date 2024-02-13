@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Mashida",
   description: "The Mashida is comprised of GameFi, SocialFi and NFTFi elements and built on blockchain technology. Mashida is a BEP20 Token and a Web3 Platform that contains a Virtual world and Social and Game application features that are interconnected, and people can interact virtually, work, play, and meet based on activity and interaction.",
   keywords: 'Mashida',
+  metadataBase: new URL('http://178.16.141.66:3004/'),
   authors: [{ name: 'Mashida Team', url: 'http://178.16.141.66:3004/' }],
   openGraph: {
     title: 'Mashida',
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Mashida',
     images: [
       {
-        url: 'http://178.16.141.66:3004/' + '/images/logo-mashida.svg',
+        url: 'http://178.16.141.66:3004/' + '/images/logo-mashida.png',
         width: 512,
         height: 512,
       },
@@ -28,8 +29,6 @@ export const metadata: Metadata = {
     type: 'website',
     countryName: 'Indonesia',
   },
-  colorScheme: 'light',
-  themeColor: '#1E202E',
   robots: 'index,follow',
 };
 

@@ -40,8 +40,8 @@ const Header = () => {
                     </div>
                 </div>
             </Container>
-            <div className="relative h-[708px] bottom-0 sm:h-screen -mt-[650px] md:-mt-[800px] lg:-mt-[550px] xl:-mt-[650px] w-full -z-50">
-                <Image src="/images/mashida-hero.svg" alt="Background Hero" fill className="object-bottom object-contain xxl:object-cover" />
+            <div className="relative h-[708px] bottom-0 sm:h-screen -mt-[450px] sm:-mt-[650px] md:-mt-[800px] lg:-mt-[550px] xl:-mt-[650px] w-full -z-50">
+                <Image src="/images/mashida-hero.svg" alt="Background Hero" fill className="object-bottom object-cover sm:object-contain xxl:object-cover" />
             </div>
         </header>
     );

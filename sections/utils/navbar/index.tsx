@@ -64,14 +64,14 @@ const Navbar = () => {
                                     setMenuTrade(true)
                                 }}
                                 className="flex flex-row gap-2 cursor-pointer items-center">
-                                <Text className="text-base xxl:text-3xl">Trade</Text>
-                                <IoIosArrowDown className={`${menuTrade ? 'rotate-180' : 'rotate-0'} transition-all xxl:text-3xl duration-300 w-4 h-4`} />
+                                <Text className="text-base xxl:text-xl">Trade</Text>
+                                <IoIosArrowDown className={`${menuTrade ? 'rotate-180' : 'rotate-0'} transition-all xxl:text-xl duration-300 w-4 h-4`} />
                             </div>
                             {
                                 menuTrade ?
                                     <ul
                                         onMouseLeave={() => setMenuTrade(false)}
-                                        className={`mt-8 text-base xxl:text-3xl xxl:mt-14 cursor-pointer font-Archivo bg-dark-primary gap-3 flex flex-col p-3 border-2 border-white absolute w-[8%] rounded-lg`}>
+                                        className={`mt-8 text-base xxl:text-xl xxl:mt-14 cursor-pointer font-Archivo bg-dark-primary gap-3 flex flex-col p-3 border-2 border-white absolute w-[8%] rounded-lg`}>
                                         <li>
                                             <Link target="_blank" href={'https://pancakeswap.finance/swap?outputCurrency=0x06CE168FF4Ca760768f42C440d4266BA705E2F21'}>
                                                 Trade
@@ -106,7 +106,7 @@ const Navbar = () => {
                                 setMenuTrade(false)
                             }}
                             href="">
-                            <Text className="text-base xxl:text-3xl">Play</Text>
+                            <Text className="text-base xxl:text-xl">Play</Text>
                         </Link>
                         <div
                             onMouseEnter={() => {
@@ -114,7 +114,7 @@ const Navbar = () => {
                             }}
                             className="flex flex-row items-center gap-2">
                             <Link href="">
-                                <Text className="text-base xxl:text-3xl">Social</Text>
+                                <Text className="text-base xxl:text-xl">Social</Text>
                             </Link>
                             <Text className="bg-orange-light rounded-full text-white text-xs xxl:text-base p-1" >Coming soon</Text>
                         </div>
